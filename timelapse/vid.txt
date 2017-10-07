@@ -1,0 +1,1 @@
+raspivid --rotation 180 --nopreview -t 40000 -o outvid.h264 -w 866 -h 650 -fps 6^C

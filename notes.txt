@@ -1,0 +1,64 @@
+sudo su
+export http_proxy="http://proxy.blrl.sap.corp:8080"
+export https_proxy="http://proxy.blrl.sap.corp:8080"
+apt-get update
+apt-get upgrade
+
+//for wifi hotspot
+http://jenssegers.be/blog/43/realtek-rtl8188-based-access-point-on-raspberry-pi
+http://elinux.org/RPI-Wireless-Hotspot
+wget https://github.com/jenssegers/RTL8188-hostapd/archive/v1.1.tar.gz
+tar -zxvf v1.1.tar.gz
+cd RTL8188-hostapd-1.1/hostapd
+sudo make
+sudo make install
+nano /etc/hostapd/hostapd.conf
+sudo service hostapd restart
+
+
+
+//for nodejs
+http://weworkweplay.com/play/raspberry-pi-nodejs/
+wget http://node-arm.herokuapp.com/node_latest_armhf.deb 
+sudo dpkg -i node_latest_armhf.deb
+nano /etc/rc.local
+su pi -c 'node /home/pi/server.js < /dev/null &'
+//for wiring pi
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+git pull origin
+cd wiringPi
+./build
+
+
+
+//for camera
+http://blog.miguelgrinberg.com/post/how-to-build-and-run-mjpg-streamer-on-the-raspberry-pi
+apt-get install libjpeg8-dev imagemagick libv4l-dev
+ln -s /usr/include/linux/videodev2.h /usr/include/linux/videodev.h
+wget http://sourceforge.net/code-snapshots/svn/m/mj/mjpg-streamer/code/mjpg-streamer-code-182.zip
+unzip mjpg-streamer-code-182.zip
+cd mjpg-streamer-code-182/mjpg-streamer
+make mjpg_streamer input_file.so output_http.so
+sudo cp mjpg_streamer /usr/local/bin
+sudo cp output_http.so input_file.so /usr/local/lib/
+sudo cp -R www /usr/local/www
+//starting
+mkdir /tmp/stream
+raspistill --nopreview -w 640 -h 480 -q 5 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &
+LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www"
+http://localhost:8080
+//to clean
+cd ../../
+rm -rf mjpg-streamer-182
+
+
+//for vnc
+http://elinux.org/RPi_VNC_Server
+sudo apt-get install tightvncserver
+tightvncserver
+nano /etc/init.d/vncboot
+paste the contents
+chmod 755 /etc/init.d/vncboot
+update-rc.d /etc/init.d/vncboot defaults
+update-rc.d vncboot defaults

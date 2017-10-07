@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table border="1" align="center">
+<th>Controls</th>
+<tr>Speed:<input type="text" id="speed" class="textbox"/></tr>
+<tr align="center"><td align="center"><button type="button" onclick="forward()">Forward</button></td></tr>
+<tr>
+<td><button type="button" onclick="left()"><<<-----Left</button>
+<button type="button" onclick="right()">Right------>>></button></td>
+</tr>
+<tr>
+<td align="center"><button type="button" onclick="backward()">Backward</button></td>
+</tr>
+<tr>
+<td align="center"><button type="button" onclick="stop()">Stop</button></td>
+</tr>
+</table>
+<script>
+var speed = document.getElementById("speed");
+function forward()
+{
+var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    var url = "http://192.168.43.129:1337/fo/"+speed.value;
+    xmlHttp.open( "GET", url, false );
+ xmlHttp.send( null );
+}
+function backward()
+{
+var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+  var url = "http://192.168.43.129:1337/ba/"+speed.value;
+    xmlHttp.open( "GET", url, false );
+ xmlHttp.send( null );
+}
+function left()
+{
+var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "http://192.168.43.129:1337/le", false );
+ xmlHttp.send( null );
+}
+function right()
+{
+var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "http://192.168.43.129:1337/ri", false );
+ xmlHttp.send( null );
+}
+function stop()
+{
+var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "http://192.168.43.129:1337/st", false );
+ xmlHttp.send( null );
+}
+</script>
+
+</body>
+</html> 

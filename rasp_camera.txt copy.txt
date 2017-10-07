@@ -1,0 +1,36 @@
+cd tomcat7
+cd bin
+./startup.sh &
+cd /home/pi
+cd Desktop
+cd rccar
+sudo node rccar.js &
+sudo node sens.js &
+sudo node trigger.js &
+sudo mkdir /tmp/stream
+sudo LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www" &
+sudo raspistill --rotation 90 --nopreview -w 320 -h 200 -q 5 -o /tmp/stream/pic.jpg -tl 33 -t 9000000 -th 0:0:0
+
+
+
+
+cd C:\Users\I074667\Desktop\mplayer and netcat
+nc -l -p 5001 | mplayer -fps 31 -cache 1024 -
+raspivid -t 999999 -o - | nc 10.53.216.110 5001
+
+ps aux | grep /home/pi/MyScript.py
+
+
+
+sudo mkdir /tmp/stream
+sudo LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www" &
+sudo raspistill --rotation 90 --nopreview -w 320 -h 200 -q 5 -o /tmp/stream/pic.jpg -tl 33 -t 9000000 -th 0:0:0
+
+cd /home/pi
+cd Desktop
+node ccar.js &
+node pccar.js
+
+cd /home/pi
+cd Desktop
+sudo java -jar jetty.jar

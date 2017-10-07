@@ -1,0 +1,112 @@
+psriram26@gmail.com / asdfgh
+
+
+https://portal.wdf.sap.corp/irj/go/km/docs/corporate_portal/Human%20Resources%20for%20SAP/Benefits/Labs%20India/MENU.xls
+
+http://vmw3815.wdf.sap.corp:50009/sap/opu/sdata/iwfnd/RMTSAMPLEFLIGHT/
+
+geritt installation
+https://gerrit-review.googlesource.com/Documentation/install.html
+
+
+http://spwdfvm1835:1082/ - blacklisted software
+
+https://itdirect.wdf.sap.corp/sap(bD1lbiZjPTAwMSZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm  --IT Direct
+
+http://smpbld:8080/jenkins
+0V&hsYNZ
+
+ios:ip 10.53.217.177
+
+https://monitoring.prod.jpaas.sapbydesign.com/cockpit/
+https://account.prod.jpaas.sapbydesign.com
+https://smpmay24sapperf2.prod.jpaas.sapbydesign.com/Admin
+https://smpmay24sapperf2.prod.jpaas.sapbydesign.com/Admin?performancelogs
+https://supjira.oak.sap.corp/browse/SMPONP-5289
+https://supjira.oak.sap.corp/browse/SMPONP-3498
+
+Order vm
+https://cft.wdf.sap.corp/virtualmachines/views/?view=ViewModuleGroupVms&groupId=717& 
+
+10.66.179.213 
+root:Lokal
+
+scc
+cd /root/scc
+chmod 777 jdk-6u35-linux-x64.bin
+chmod 777 sapcc10SP00P_4-10011098.zip
+./jdk-6u35-linux-x64.bin
+unzip sapcc10SP00P_4-10011098.zip
+zypper install *.rpm
+/opt/sap/scc/daemon.sh start
+Login
+Administrator, manage
+
+
+
+http://supnexus.oak.sap.corp:8081/nexus/content/repositories/snapshots/com/sybase/mobile/sdmodata/android/sdk/AndroidODataSDK/suplite223-SNAPSHOT/
+
+http://supnexus.oak.sap.corp:8081/nexus/content/repositories/snapshots/com/sybase/sup/odp/client/Android/AndroidODPSDK/suplite223-SNAPSHOT/
+
+
+http://ldcig8p.wdf.sap.corp:50018/sap/opu/odata/iwfnd/RMTSAMPLEFLIGHT/
+pwdf3278 - jetty
+pwdf6798 - hp and aries
+pwdf3177 - sup2.3
+pwdf3277 - gateway
+pwdf3294 - SMP3.0 ram installation
+
+http://10.68.139.106:5001/ias_relay_server/monitor/rs_monitor.dll
+
+
+] max_fps 101
+] cl_cmdrate 101
+] cl_updaterate 101
+] rate 25000
+] ex_interp 0.01
+
+visa number: AA003LSRHC
+ma.manoj@gmail.com (22837695)
+
+\c -n DEWDFGLP00746.wdf.sap.corp:30115 -u SYSTEM -p Manager0
+
+https://sapnow.co.sap.com/sap_now/salesspotlight/012Jam.pdf SAP JAM
+http://supnexus.oak.sap.corp:8081/nexus/content/repositories/snapshots/com/sybase/sup/installer/rt-supportpack/uep22sp04-SNAPSHOT/
+
+https://www.cubetree.com/c/jamatsap.com/saml/saml2_sso?company_id=sf&idp=accounts-jamatsap.sap.com -- SAP JAM Login
+
+bozzkar
+M@goo$h
+
+
+C:\SAP\MobilePlatform3\Server\bin\svcutil -uninstall
+C:\SAP\MobilePlatform3\Server\bin\svcutil -generate
+C:\SAP\MobilePlatform3\Server\bin\svcutil -install
+
+imgur
+client id
+1bf5299393735fa
+client secret
+07107c99e2413ce1cb13004bfaff047a42f51882
+https://api.imgur.com/oauth2/authorize?client_id=1bf5299393735fa&response_type=pin&state=manoj
+
+
+flikr
+key
+38e79955c5f1d5e1be5e4aeee400e9a2
+secret
+8d296e530ff0c9c6
+
+
+cloudinary
+ma.manoj@gmail.com
+manojma
+personal - company
+manojimage - cloud name
+214855748425667  -  api key
+620QK-Ukedh5s44E52P6XQ57Tj4   -  api secret
+CLOUDINARY_URL=cloudinary://214855748425667:620QK-Ukedh5s44E52P6XQ57Tj4@manojimage   - environmentl variable
+
+
+public_id=trybase64&timestamp=1395903933413620QK-Ukedh5s44E52P6XQ57Tj4
+

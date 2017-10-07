@@ -1,0 +1,1 @@
+raspivid --rotation 180 --nopreview -o /media/MANOJ/camera/outvid.h264 -t 2

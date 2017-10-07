@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+setInterval(check_status,1000);
+function check_status()
+{
+var xmlHttp = new XMLHttpRequest();
+var url = "http://192.168.43.129:1339";
+xmlHttp.open( "GET", url, false );
+xmlHttp.send( null );
+if(xmlHttp.responseText.indexOf("safe")==-1)
+{
+alert("Fire");
+}
+}
+</script>
+</head>
+
+</html>

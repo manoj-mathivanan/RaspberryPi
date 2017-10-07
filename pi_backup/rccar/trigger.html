@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button type="button" id="red" onclick="red_box()">Red Box OFF</button>
+<button type="button" id="intru" onclick="intruder()">Intruder OFF</button>
+<button type="button" onclick="fire()">Fire</button>
+<script>
+function intruder()
+{
+var red_text=document.getElementById("intru");
+if(red_text.textContent=="Intruder ON")
+{
+red_text.innerHTML = "Intruder OFF";
+var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    var url = "http://192.168.43.129:1337/intruoff";
+    xmlHttp.open( "GET", url, false );
+ xmlHttp.send( null );
+}
+else
+{
+red_text.innerHTML = "Intruder ON";
+var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    var url = "http://192.168.43.129:1337/intruon";
+    xmlHttp.open( "GET", url, false );
+ xmlHttp.send( null );
+}
+}
+function red_box()
+{
+var red_text=document.getElementById("red");
+if(red_text.textContent=="Red Box ON")
+{
+red_text.innerHTML = "Red Box OFF";
+var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    var url = "http://192.168.43.129:1337/redoff";
+    xmlHttp.open( "GET", url, false );
+ xmlHttp.send( null );
+}
+else
+{
+red_text.innerHTML = "Red Box ON";
+var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    var url = "http://192.168.43.129:1337/redon";
+    xmlHttp.open( "GET", url, false );
+ xmlHttp.send( null );
+}
+ }
+function fire()
+{
+alert("please call the mobile");
+}
+</script>
+</body>
+</html>
